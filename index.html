@@ -5,30 +5,43 @@
 	<title>Muhammad Wahyu Ramadhan</title>
 </head>
 <style>
-	body{
-		background-image: linear-gradient(45deg, #c94b4b, #4b134f);
+	*{
+		margin: 0;
+		padding: 0;
 	}
-	div{
+	.container{
+		display: grid;
 		width: 100%;
 		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		background-color: black;
+		position: relative;
+		color: white;
+	}
+	.item{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 200px;
+		
+	}
+	.dua{
+		background-image: url(haqul.jpg);
 	}
 	h1{
-		font-size: 40px;
-		font-family: sans-serif;
-		color: white;
-		text-shadow: 4px 4px 4px black;
+		font-size: 15px;
+		position: absolute;
+		top: 80%;
+		left: 50%;
+		transform: translateX(-50%);
 	}
-
 </style>
 <body>
 
-	<div>
-		<h1>WonderKid.MiawMiaw_YukiYukeo</h1>
+	<div class="container">
+		<img src="haqul.jpg" class="item dua">
+		<h1>MANGKANYA GANTENG QUL!</h1>
 	</div>
-
 	
 </body>
 </html>								
