@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	body{
+		font-family: sans-serif;
+	}
+	.kotak{
+		margin: auto;
+		padding: 20px;
+		box-sizing: border-box;
+		width: 45%;
+		border: 3px solid black;
+	}
+	.sumpit{
+		text-align: center;
+	}
+	button{
+		margin-top: 10px;
+		width: 100%;
+		height: 40px;
+	}
+</style>
+<body>
+	<h1 class="diskon">2. Harga Diskon</h1>
+	<div class="kotak">
+		<h2 class="sumpit">Kalkulator Diskon Barang</h2>
+		<label for="sumpit">Masukan Harga Barang :</label>
+		<input type="text" id="hargaa">
+		<br><br>
+		<label for="sumpit">Masukan jumlah Barang  : </label>
+		<input type="text" id="jumlah">
+		<br>
+		<button type="button" onclick="cetak()">kirim</button>
+		<p id="diskon">Diskon : </p>
+		<p id="pajak">Pajak : </p>
+		<p id="harga">Harga : </p>
+	</div>
+	<h1 class="kredit">3. Harga </h1>
+</body>
+<script>
+	function cetak(){
+		let hargaa = document.getElementById("hargaa").value;
+		let jumlah = document.getElementById("jumlah").value;
+		let hasil = hargaa*jumlah;
+		if (jumlah >=5) {
+			hasil = hasil * 0.10;
+			document.getElementById("harga").innerHTML = "Harga : " + hasil;
+			document.getElementById("diskon").innerHTML = "Diskon : 10%";
+		}else{
+			document.getElementById("diskon").innerHTML = "Diskon : -";
+			document.getElementById("harga").innerHTML = "Harga : " + hasil;
+		}
+		if (hasil >= 10000) {
+			hasil = hasil * 0.2;
+			document.getElementById("harga").innerHTML = "Harga : " + hasil;
+			document.getElementById("pajak").innerHTML = "Pajak : 2%";
+		}else{
+			document.getElementById("harga").innerHTML = "Harga : " + hasil;
+			document.getElementById("pajak").innerHTML = "Pajak : -";
+		}
+		
+	}
+</script>
+</html>
+
