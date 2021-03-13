@@ -1,39 +1,71 @@
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clock.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@200&family=Montserrat+Subrayada&display=swap"
+    rel="stylesheet">
+    <title>Document</title>
 </head>
-<style>
-	body{
-		background-color: grey;
-		display: flex;
-	}
-	h1{
-		text-align: center;
-	}	
-	.body{
-		margin: auto;
-		background-color: white;
-		border: 3px solid black;
-		width: 500px;
-	}
-	marquee{
-		font-family: sans-serif;
-	}
-	@media (max-width: 600px) {
-		.body{
-			transform: scale(.6);
-		}
-	}
-</style>
 <body>
+    <div class="h1">
+        <h1>Analog Clock</h1>
+    </div>
+    <div class="clock">
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="second">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+    <div class="digital">
+        <center>
+        <div class="box">
+            <p id="jam"></p>
+        </div>
+        <div class="box">
+            <p id="menit"></p>
+        </div>
+        <div class="box">
+            <p id="detik"></p>
+        </div>
+        </center>
+    </div>
 
-	<div class="body">
-		<h1><i>Anggi Armelia</i></h1>
-		<img src="anggiWa.jpg" width="500">
-		<marquee behavior="" direction=""><h1>"Cita-cita Boleh tinggi, tapi diri tetep males.. siapa dia.? ya Armelia donkk >_<"</h1></marquee>
-	</div>
-	
+<script>
+    let hr = document.querySelector("#hr");
+    let mn = document.querySelector("#mn");
+    let sc = document.querySelector("#sc");
+
+    let jm = document.getElementById("jam");
+    let mnt = document.getElementById("menit");
+    let dtk = document.getElementById("detik");
+
+    setInterval(() => {
+        let hari = new Date();
+        let jam = hari.getHours() * 7 ;
+        let menit = hari.getMinutes() * 6;
+        let detik = hari.getSeconds() * 6;
+
+        hr.style.transform = `rotateZ(${jam + (menit / 12)}deg)`;
+        mn.style.transform = `rotateZ(${menit}deg)`;
+        sc.style.transform = `rotateZ(${detik}deg)`;   
+        
+        if(jm<10){
+            jm = "0" + jm;
+        }
+
+        jm.innerHTML = hari.getHours() + ":";
+        mnt.innerHTML = hari.getMinutes() + ":";
+        dtk.innerHTML = hari.getSeconds();
+    });
+
+</script>
+
+    
 </body>
 </html>
