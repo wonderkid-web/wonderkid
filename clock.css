@@ -95,6 +95,7 @@ h1{
 @media (max-width: 600px){
     .h1{
         font-size: 38px;
+        text-align: center;
     }
     .clock{
         transform: scale(.8);
