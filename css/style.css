@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --main-font: 'Raleway', sans-serif;
+}
 body{
     margin: 0;
     width: 100vw;
@@ -119,12 +124,99 @@ body{
    background-color: rgb(0,0,50);
    box-shadow: 0 0 15px rgba(0,0,0,.5);
 }
-.kotak{
-    width: 100vw;
+.mini-bio{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 450px;
+    margin: auto;
+    background: rgb(0,0,80);
+    color: white;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,.4);
+    border-radius: 50px;
+}
+.pic-2{
+    height: 400px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: .4s;
+}
+.pic-2:hover{
+    box-shadow: 0 5px 15px 1px rgba(0,0,0,.3);
+}
+.pic-2 img{
+    display: block;
+}
+.whatsapp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;
+}
+.whatsapp a{
+    text-decoration: none;
+    height: 35px;
+    display: inline-block;
+    position: relative;
+    transition: 1s;
+}
+.icon-wa{
+    transition: 1s;
+}
+.whatsapp a:hover{
+    top: -15px;
+}
+.mini-text{
+    color: rgb(0,0,80);
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 35px;
+    font-family: 'Raleway', sans-serif;
+}
+.typing{
+    width: 50%;
     height: 100px;
-    font-family: monospace;
+    font-family: 'Raleway', sans-serif;
+
+}
+.type{
+    width: 700px;
+    height: 30px;
+    margin-bottom: 15px; 
+}
+.typing p{
+    font-family: arial;
 }
 .svg-2{
     margin-left: 50%;
     transform: scale(.3);
+}
+.location{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-family: var(--main-font);
+    box-sizing: border-box;
+}
+.coloumn-section{
+    padding-top: 50px 40px;
+    width: 80%;
+    margin: auto;
+
+}
+.location-h1{
+    display: inline-block;
+    padding: 15px;
+    color: white;
+    background: #76006c;
+}
+.wave-2{
+    background-color: salmon;
+}
+.maps{
+    width: 100vw;
+    height: 500px;
 }
