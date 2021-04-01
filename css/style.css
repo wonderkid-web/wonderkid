@@ -3,6 +3,7 @@ html{
     scroll-behavior: smooth;
 }
 :root{
+    --paragraph: #333;
     --main-font: 'Raleway', sans-serif;
 }
 body{
@@ -180,6 +181,7 @@ body{
     width: 50%;
     height: 100px;
     font-family: 'Raleway', sans-serif;
+    margin-top: 7%;
 
 }
 .type{
@@ -200,6 +202,7 @@ body{
     margin-bottom: 100px;
     font-family: var(--main-font);
     box-sizing: border-box;
+    color: var(--paragraph);
 }
 .coloumn-section{
     padding-top: 50px 40px;
@@ -219,4 +222,25 @@ body{
 .maps{
     width: 100vw;
     height: 500px;
+}
+footer{
+    background-color: rgb(0,0,70);
+    width: 100%;
+    height: 30vh;
+    padding: 20px 30px;
+    display: flex;
+    color: #eee;
+    font-family: var(--main-font);
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+footer ul{
+    margin-top: 0;
+}
+footer ul li{
+    font-size: .9em;
+    margin-bottom: 8px;
+}
+.name{
+    align-self: center;
 }
