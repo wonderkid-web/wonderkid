@@ -3,6 +3,8 @@ html{
     scroll-behavior: smooth;
 }
 :root{
+	--short-margin: 45px;
+	--medium-margin: 100px;
     --paragraph: #333;
     --main-font: 'Raleway', sans-serif;
 }
@@ -198,7 +200,6 @@ body{
 }
 .location{
     text-align: center;
-    margin-top: 100px;
     margin-bottom: 100px;
     font-family: var(--main-font);
     box-sizing: border-box;
@@ -208,10 +209,13 @@ body{
     padding-top: 50px 40px;
     width: 80%;
     margin: auto;
-
+}
+.coloumn-section h3{
+	margin: var(--short-margin) 0;
 }
 .location-h1{
     display: inline-block;
+	margin-bottom:  var(--short-margin);
     padding: 15px;
     color: white;
     background: #76006c;
@@ -226,7 +230,6 @@ body{
 footer{
     background-color: rgb(0,0,70);
     width: 100%;
-    height: 30vh;
     padding: 20px 30px;
     display: flex;
     color: #eee;
@@ -244,3 +247,75 @@ footer ul li{
 .name{
     align-self: center;
 }
+@media (max-width: 787px){
+		.up-section{
+				display: flex;
+				align-items: center;
+		  		flex-direction: column-reverse;
+		}
+		.side-bar{
+           width: 100vw;
+           display: inline-block;
+           writing-mode: horizontal-tb;
+           box-sizing: border-box;
+           padding: 0;
+		}
+		.side-bar ul{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+			font-size: .9em;
+        }
+        .curved h1{
+            width: 250px;
+        }
+        .progress-bar{
+            margin-top: 30px;
+        }
+        .up-foto{
+            width: 100vw;
+        }
+        .foto{
+            clip-path:polygon(48px 99.18%, 39.58% 12px, 100.31% 83.95%);
+        }
+        .mini-bio{
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            height: 700px;
+        }
+        .mini-text{
+            display: none;
+        }
+        .pic-2{
+            display: flex;
+            transform: scale(.8);
+        }
+        .typing{
+            margin-top: -25px;
+            padding: 10px;
+            font-size: 15px;
+            width: 100%;
+            height: 300px;
+        }
+        .type{
+            font-size: 18px;
+        }
+        .whatsapp{
+            margin: 0 auto;
+        }
+        .whatsapp a{
+            transition: .3s;
+        }
+        .whatsapp a:hover{
+            top : 0px;
+            transform: scale(1.1);
+        }
+        footer{
+            flex-direction: column;
+        }
+        footer ul{
+            margin-left: -25px;
+        }
