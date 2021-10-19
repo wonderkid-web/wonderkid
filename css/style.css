@@ -183,7 +183,7 @@ body{
     width: 50%;
     height: 100px;
     font-family: 'Raleway', sans-serif;
-    margin-top: 7%;
+    margin-top: 0;
 
 }
 .type{
@@ -193,6 +193,13 @@ body{
 }
 .typing p{
     font-family: arial;
+}
+.skill{
+    display: flex;
+    flex-direction: row;
+}
+.skill>.kanan{
+    margin-left: 40px;
 }
 .svg-2{
     margin-left: 50%;
@@ -236,6 +243,8 @@ footer{
     font-family: var(--main-font);
     box-sizing: border-box;
     justify-content: space-around;
+    position: relative;
+    bottom: -100px;
 }
 footer ul{
     margin-top: 0;
@@ -246,6 +255,15 @@ footer ul li{
 }
 .name{
     align-self: center;
+}
+.i-contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.i-contact > li img{
+    border-radius: 100px;
+    list-style: none;
 }
 @media (max-width: 787px){
 		.up-section{
